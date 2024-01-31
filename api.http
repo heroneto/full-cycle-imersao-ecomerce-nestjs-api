@@ -1,0 +1,38 @@
+GET http://localhost:3000/products
+
+###
+
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+  "name": "Product 1",
+  "description": "Product 1 description",
+  "image_url": "http://via.placeholder.com/150",
+  "price": 100
+}
+
+
+###
+
+GET http://localhost:3000/orders
+
+
+###
+
+POST http://localhost:3000/orders
+Content-Type: application/json
+
+{
+  "items": [
+    {
+      "product_id": "550e8400-e29b-41d4-a716-446655440001",
+      "quantity": 1
+    },
+    {
+      "product_id": "550e8400-e29b-41d4-a716-446655440002",
+      "quantity": 2
+    }
+  ],
+  "card_hash": "123"
+}
